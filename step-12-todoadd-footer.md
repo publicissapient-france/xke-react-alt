@@ -120,7 +120,6 @@ import { Link } from 'react-router';
 Then, add `renderFilter` function:
 
 ```
-
   renderFilter() {
 
     var nowShowing = this.props.nowShowing;
