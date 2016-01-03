@@ -43,8 +43,8 @@ ReactDOM.render(routes, document.getElementById('app'));
 ```
 
 
-# Topics & exercices:
+# Topics:
 
-1. Topic: What is a router
-2. Topic: Different kind of routers
-3. Exercise: Create Router
+1. What is a router
+2. Different kind of routers
+3. Create Router
