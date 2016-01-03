@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 09 - Add TodoApp Header
+## Step 08 - Add TodoApp Header
 
 Let add a `renderHeader` function to `TodoApp` component:
 
