@@ -64,7 +64,7 @@ export default TodoFooter;
 ``` 
 
 
-#####Add `renderCount` function
+#####Implement `render` function
 
 Add `pluralize`:
 
@@ -74,13 +74,13 @@ First, import dependency:
 npm i -S pluralize
 ``` 
 
-Then, import in footer:
+Then, import `pluralize` in footer:
 
 ``` 
 import pluralize from 'pluralize';
 ``` 
 
-Next, implement count :
+Then, implement `renderCount` function:
 
 ``` 
 renderCount() {
