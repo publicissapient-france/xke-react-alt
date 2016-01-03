@@ -4,7 +4,7 @@
 
 ## Step 12 - Add TodoApp footer
 
-We want to add a footer to the `TodoItem`list.
+We want to add a footer to the `TodoItem`list in `TodoApp.jsx` file.
 
 First, we add `activeTodoCount` function:
 
