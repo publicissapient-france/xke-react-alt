@@ -59,19 +59,19 @@ import TodoActions from '../actions/TodoActions';
 ```
 toggleAll(event) {
   var checked = event.target.checked;
-  <...>
+  TodoActions.toggleAll(checked);
 }
 
-toggle(todoToToggle) {
-  <...>
+toggle(todo) {
+  TodoActions.toggle(todo);
 }
 
 destroy(todo) {
-  <...>
+  TodoActions.destroy(todo);
 }
 
 edit(todo) {
-  <...>
+  TodoActions.edit(todo.id);
 }
 
 save(todoToSave, text) {
@@ -88,7 +88,7 @@ cancel() {
 }
 
 clearCompleted() {
-  <...>
+  TodoActions.clearCompleted();
 }
 ```
 
@@ -139,13 +139,13 @@ render() {
 }
 ```  
 
-// Topics & exercices:
-//
-// 1 - Topic: Give some infos about ES5 vs ES6 React code
-// 2 - Topic: Give a word about mixins
-// 3 - Topic: Explain JSX, structure and lifecycle of components
-// 4 - Topic: TodoMVC has reusable resource set
-// 5 - Topic: Role of AltContainer : Connect Stores & Actions to Component lifecycle
-// 6 - Topic: Explain render function, especially, variable association
-// 7 - Exercise: Implements Action calls in functions
+# Topics & exercices:
+
+1. Topic: Give some infos about ES5 vs ES6 React code
+2. Topic: Give a word about mixins
+3. Topic: Explain JSX, structure and lifecycle of components
+4. Topic: TodoMVC has reusable resource set
+5. Topic: Role of AltContainer : Connect Stores & Actions to Component lifecycle
+6. Topic: Explain render function, especially, variable association
+7. Exercise: Implements Action calls in functions
 
