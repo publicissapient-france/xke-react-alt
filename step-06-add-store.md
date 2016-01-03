@@ -103,13 +103,6 @@ onClearCompleted() {
   });
 }
 
-onEdit(id) {
-  this.setState({ editing: id });
-}
-
-onShow(nowShowing) {
-  this.setState({ nowShowing: nowShowing })
-}
 ```
 
 
@@ -120,5 +113,4 @@ onShow(nowShowing) {
 2. - Topic: Async with `Store`s:  Where to put async calls
 3. - Topic: Use `Source`s with `Alt`
 4. - Topic: Store functions: `listen()`, `unlisten()`, `emitChange()`
-5. - Exercise: Implement the 3 functions: `onClearCompleted()`, `onEdit()`, `onShow()`
 
