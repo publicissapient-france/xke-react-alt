@@ -32,7 +32,7 @@ To run application, following command needs to be executed:
 npm start
 ```
 
-Topics & exercices:
+# Topics & exercices:
 
 1. Topic: What is React
 2. Topic: What is Flux & Alt
