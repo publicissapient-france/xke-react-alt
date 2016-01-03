@@ -33,8 +33,8 @@ Add some actions in constructor of TodoActions:
 ```
 
 
-# Topics & exercices:
+# Topics:
 
-1. Topic: What is an `Action` (`Action Creator`s & `Constant`s)
-2. Topic: Different ways to create an action (return value, use of dispatch, special cases: undefined & Promises)
-3. Topic: Defer an action to avoid a dispatch in dispatch
+1. What is an `Action` (`Action Creator`s & `Constant`s)
+2. Different ways to create an action (return value, use of dispatch, special cases: undefined & Promises)
+3. Defer an action to avoid a dispatch in dispatch
