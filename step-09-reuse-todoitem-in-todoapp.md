@@ -4,35 +4,29 @@
 
 ## Step 9 - Reuse TodoItem in TodoApp
 
-In `render` function of TodoApp,  you can now add code to map each entry of todo list into `TodoItem`s :
+In a new function `renderItems` of `TodoApp.jsx`, you can now add code to map each entry of todo list into `TodoItem`s :
 
 ``` 
-  render() {
-    var todoItems = null;
-
-    if (this.props.todos) {
-      todoItems = this.props.todos.map(function (todo) {
-        return (
-            <TodoItem
-                key={todo.id}
-                todo={todo}
-                onToggle={this.toggle.bind(this, todo)}
-                onDestroy={this.destroy.bind(this, todo)}
-                onEdit={this.edit.bind(this, todo)}
-                editing={this.state.editing === todo.id}
-                onSave={this.save.bind(this, todo)}
-                onCancel={this.cancel}
-                />
-        );
-      }, this);
-    }
-
-    return (
-      <div className="index">
-        <...>
-      </div>
-    );
+renderItems() {
+  if (!this.props.todos) {
+    return undefined;
   }
+  
+  return this.props.todos.map(function (todo) {
+    return (
+      <TodoItem
+        key={todo.id}
+        todo={todo}
+        onToggle={this.toggle.bind(this, todo)}
+        onDestroy={this.destroy.bind(this, todo)}
+        onEdit={this.edit.bind(this, todo)}
+        editing={this.state.editing === todo.id}
+        onSave={this.save.bind(this, todo)}
+        onCancel={this.cancel}
+      />
+    );
+  }, this);
+}
 ``` 
 
 Topics:
