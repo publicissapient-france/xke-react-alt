@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 15 - Add todo items filtering
+## Step 14 - Add todo items filtering
 
 
 ###1/ Todo filtering
