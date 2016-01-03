@@ -63,7 +63,7 @@ export default TodoFooter;
 ``` 
 
 
-####Add Render Method
+####Add Render count function
 
 ```
 render() {
