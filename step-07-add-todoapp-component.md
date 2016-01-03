@@ -167,12 +167,12 @@ this.handleNewTodoKeyDown = this.handleNewTodoKeyDown.bind(this);
 this.handleChange = this.handleChange.bind(this);
 ```
 
-# Topics & exercices:
+# Topics:
 
-1. Topic: Give some infos about ES5 vs ES6 React code
-2. Topic: Give a word about mixins
-3. Topic: Explain JSX, structure and lifecycle of components
-4. Topic: TodoMVC has reusable resource set
-5. Topic: Role of AltContainer : Connect Stores & Actions to Component lifecycle
-6. Topic: Explain render function, especially, variable association
+1. Give some infos about ES5 vs ES6 React code
+2. Give a word about mixins
+3. Explain JSX, structure and lifecycle of components
+4. TodoMVC has reusable resource set
+5. Role of AltContainer : Connect Stores & Actions to Component lifecycle
+6. Explain render function, especially, variable association
 
