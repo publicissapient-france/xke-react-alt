@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 12 - Add TodoApp Header
+## Step 11 - Add TodoApp Header
 
 Let add a header to our TodoItem list:
 
