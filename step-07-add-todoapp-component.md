@@ -69,21 +69,11 @@ destroy(todo) {
   TodoActions.destroy(todo);
 }
 
-edit(todo) {
-  TodoActions.edit(todo.id);
-}
-
 save(todoToSave, text) {
   TodoActions.save({
     todoToSave: todoToSave,
     text: text
   });
-
-  TodoActions.edit(null);
-}
-
-cancel() {
-  TodoActions.edit(null);
 }
 
 clearCompleted() {
