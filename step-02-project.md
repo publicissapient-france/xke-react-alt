@@ -6,6 +6,18 @@
 
 ### Create Project
 
+#### Create folder
+
+```
+mkdir xke-react-alt-todomvc-revisited
+```
+
+#### Go to folder
+
+```
+cd xke-react-alt-todomvc-revisited
+```
+
 #### Run Yeoman
 ```
 yo react-webpack-alt
