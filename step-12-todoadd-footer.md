@@ -6,18 +6,35 @@
 
 We want to add a footer to the `TodoItem`list.
 
-```
-var completedCount = this.props.todos.length - activeTodoCount;
+First, we add `activeTodoCount` function:
 
-if (activeTodoCount || completedCount) {
-  footer =
+```
+  activeTodoCount() {
+    return this.props.todos.reduce((accum, todo) => {
+      return todo.completed ? accum : accum + 1;
+    }, 0);
+  }
+```
+
+Then, we need to create a `renderFooter` function:
+```
+  renderFooter() {
+    var activeTodoCount = this.activeTodoCount();
+    var completedCount = this.props.todos.length - activeTodoCount;
+
+    if (!activeTodoCount && !completedCount) {
+      return undefined;
+    }
+
+    return (
       <TodoFooter
-          count={activeTodoCount}
-          completedCount={completedCount}
-          nowShowing={this.props.nowShowing}
-          onClearCompleted={this.clearCompleted}
-          />;
-}
+        count={activeTodoCount}
+        completedCount={completedCount}
+        nowShowing={this.props.nowShowing}
+        onClearCompleted={this.clearCompleted}
+      />
+    );
+  }
 ```
 
 ###Add TodoFooter.jsx file
@@ -41,13 +58,13 @@ export default TodoFooter;
 
 ```
 render() {
-    return (
-        <footer className="footer">
-			{count}
-			{filter}
-            {clearButton}
-        </footer>
-    );
+  return (
+    <footer className="footer">
+      {count}
+      {filter}
+      {clearButton}
+   </footer>
+  );
 }
 ``` 
 
@@ -71,9 +88,9 @@ Then,  implement count :
 var activeTodoWord = pluralize('item', this.props.count); 
   
 var count = (
-        <span className="todo-count">
-            <strong>{this.props.count}</strong> {activeTodoWord} left
-        </span>
+  <span className="todo-count">
+    <strong>{this.props.count}</strong> {activeTodoWord} left
+  </span>
 );
 ```
 
@@ -104,12 +121,7 @@ if (this.props.completedCount > 0) {
 }
 ``` 
 
+# Topics & exercices:
 
+1. Explain usage of `Link`
 
-// Topics & exercices:
-//
-// 1 - Topic: Explain usage of `Link`
-// 2 - Exercise: Install `pluralize` dependency
-// 3 - Exercise: Import `pluralize` dependency
-// 4 - Exercise: Implement a button with classname `clear-completed` and associate `onClick` event with `onClearCompleted` and label: `Clear completed`
-// 5 - Exercice: Implement a filter list (ul tag) with classname `filters` of 3 elements of type Link from react-router mapped to paths: ``, `active`, `completed` and a classname (using classNames module) to activate `selected` class based on nowShowing variable matching route constant
