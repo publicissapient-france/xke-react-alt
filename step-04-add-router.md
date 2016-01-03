@@ -42,6 +42,24 @@ let routes = (
 ReactDOM.render(routes, document.getElementById('app'));
 ```
 
+####Update index file
+
+Replace :
+
+```
+<div id="app">APPLICATION CONTENT</div>
+```
+
+By:
+
+```
+<section id="app" class="todoapp"></section>
+<footer class="info">
+  <p>Double-click to edit a todo</p>
+  <p>Created by <a href="http://github.com/wishpishh">Alexis Kinsella</a> based on React example by <a href="https://github.com/wishpishh/">wishpishh</a></p>
+  <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+</footer>
+```
 
 # Topics:
 
