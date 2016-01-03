@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 8 - Add TodoItem Component
+## Step 9 - Add TodoItem Component
 
 Now, we need to add a new component corresponding to a todo item, we will call it `TodoItem.jsx`
 
