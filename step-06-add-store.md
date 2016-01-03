@@ -21,7 +21,7 @@ Then, add constructor in TodoStore:
 
 ```
 constructor() {
-    this.bindActions(TodoActions);
+  this.bindActions(TodoActions);
 }
 ```
 
@@ -89,23 +89,12 @@ onDestroy(todoToDestroy) {
   });
 }
 
-onSave(command) {
-  this.setState({
-    todos: this.state.todos.map(todo =>
-      todo !== command.todoToSave ? todo : extend({}, command.todoToSave, { title: command.text })
-    )
-  });
-}
-
 onClearCompleted() {
   this.setState({
     todos: this.state.todos.filter( todo => !todo.completed )
   });
 }
-
 ```
-
-
 
 # Topics:
 
