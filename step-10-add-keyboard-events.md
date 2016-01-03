@@ -35,11 +35,4 @@ handleChange(event) {
 }
 ```
 
-#####Handlers binding
-
-We need to bind handler functions to this (`TodoApp`), but also initialize state of component, with following code:
-
-```
-<...>
-``` 
 
