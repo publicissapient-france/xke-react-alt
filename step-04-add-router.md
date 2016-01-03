@@ -8,8 +8,8 @@ The router used is `React-Router`
 
 ####Install
 ``` 
-npm install -S react-router
 npm install -S history
+npm install -S react-router
 ``` 
 
 ####Configuration
