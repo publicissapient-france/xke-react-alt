@@ -27,8 +27,6 @@ You need to rename `styles/App.scss` to `styles/TodoApp.scss` if not done.
 
 #####Connect with TodoStore
 
-
-
 First import `alt-container`:
 
 ```
@@ -41,17 +39,23 @@ Then, import `TodoStore` & `AltContainer` modules in `TodoApp.jsx`:
 import TodoStore from '../stores/TodoStore'
 import AltContainer from 'alt/AltContainer';
 ```
-Then, use altContainer in `render` function:
+Then, declare a new `TodoAppContainer` component & export this component:
 
 ```
-render() {
-  return (
-      <AltContainer store={TodoStore}>
-        <div />
-      </AltContainer>
-  );
+class TodoAppContainer extends React.Component {
+
+  render() {
+    return (
+        <AltContainer store={TodoStore}>
+          <TodoApp {...this.props} />
+        </AltContainer>
+    );
+  }
+
 }
-``` 
+
+export default TodoAppContainer;
+```
 
 #####Component handlers
 
