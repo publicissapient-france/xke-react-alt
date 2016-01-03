@@ -27,7 +27,15 @@ You need to rename `styles/App.scss` to `styles/TodoApp.scss` if not done.
 
 #####Connect with TodoStore
 
-First import `TodoStore` & AltContainer:
+
+
+First import `alt-container`:
+
+```
+npm i -S alt-container
+```
+
+Then, import `TodoStore` & `AltContainer` modules in `TodoApp.jsx`:
 
 ``` 
 import TodoStore from '../stores/TodoStore'
