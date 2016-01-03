@@ -37,7 +37,7 @@ Then, we need to create a `renderFooter` function:
   }
 ```
 
-###Add TodoFooter.jsx file
+###Add `TodoFooter.jsx` file
 
 First, create `TodoFooter`:
 ```
@@ -54,7 +54,8 @@ import React, {Component} from 'react';
 class TodoFooter extends Component {
 
     render() {
-
+      <footer className="footer">
+      </footer>
     }
 
 }
@@ -63,21 +64,7 @@ export default TodoFooter;
 ``` 
 
 
-####Add Render count function
-
-```
-render() {
-  return (
-    <footer className="footer">
-      {count}
-      {filter}
-      {clearButton}
-   </footer>
-  );
-}
-``` 
-
-#####Add count
+#####Add `renderCount` function
 
 Add `pluralize`:
 
