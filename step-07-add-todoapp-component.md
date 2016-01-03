@@ -151,7 +151,7 @@ constructor(props, context) {
 
 ##### Add & Bind event handlers
 
-Add event handlers:
+First, add event handlers:
 
 ```
 handleChange(event) {
@@ -163,7 +163,7 @@ handleNewTodoKeyDown(event) {
 }
 ```
 
-Then add event handler binding into constructor:
+Then, add event handler binding into constructor:
 
 ```
 this.handleNewTodoKeyDown = this.handleNewTodoKeyDown.bind(this);
