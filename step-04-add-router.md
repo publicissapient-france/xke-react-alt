@@ -31,14 +31,20 @@ import TodoApp from './TodoApp';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 const history = createBrowserHistory();
 
-let routes = <...>;
+let routes = (
+  <Router history={history}>
+    <Route path='/' component={ TodoApp } />
+    <Route path='active' component={ TodoApp } />
+    <Route path='completed' component={ TodoApp } />
+  </Router>
+);
 
 ReactDOM.render(routes, document.getElementById('app'));
 ```
 
 
-// Topics & exercices:
-//
-// 1 - Topic: What is a router
-// 2 - Topic: Different kind of routers
-// 3 - Exercise: Create Router
+# Topics & exercices:
+
+1. Topic: What is a router
+2. Topic: Different kind of routers
+3. Exercise: Create Router
