@@ -49,7 +49,6 @@ render() {
 }
 ```
 
-// Topics & exercices:
-//
-// 1 - Topic: Explain property passing from components to subcomponents
-// 2 - Exercise: Implement code to build classname
+# Topics & exercices:
+
+1. Explain property passing from components to subcomponents
