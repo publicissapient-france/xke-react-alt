@@ -175,5 +175,4 @@ this.handleChange = this.handleChange.bind(this);
 4. Topic: TodoMVC has reusable resource set
 5. Topic: Role of AltContainer : Connect Stores & Actions to Component lifecycle
 6. Topic: Explain render function, especially, variable association
-7. Exercise: Implements Action calls in functions
 
