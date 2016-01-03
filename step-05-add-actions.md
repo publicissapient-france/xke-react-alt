@@ -23,10 +23,10 @@ Add some actions in constructor of TodoActions:
 
 ```
   this.generateActions(
+    'addTodo',
     'toggleAll',
     'toggle',
     'destroy',
-    'save',
     'clearCompleted'
   );
 }
