@@ -27,7 +27,13 @@ renderItems() {
     );
   }, this);
 }
-``` 
+```
+
+Then, add call into `render` function:
+
+```
+{this.renderItems()}
+```
 
 Topics:
 
