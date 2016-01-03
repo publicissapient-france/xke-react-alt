@@ -107,10 +107,10 @@ onClearCompleted() {
 
 
 
-# Topics & exercices:
+# Topics:
 
 1. Topic: What is a `Store`
-2. - Topic: Async with `Store`s:  Where to put async calls
-3. - Topic: Use `Source`s with `Alt`
-4. - Topic: Store functions: `listen()`, `unlisten()`, `emitChange()`
+2. Topic: Async with `Store`s:  Where to put async calls
+3. Topic: Use `Source`s with `Alt`
+4. Topic: Store functions: `listen()`, `unlisten()`, `emitChange()`
 
