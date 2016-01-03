@@ -35,8 +35,6 @@ In `render` function of TodoApp,  you can now add code to map each entry of todo
   }
 ``` 
 
+Topics:
 
-// Topics & exercices:
-//
-// 1 - Topic: How to map data to components
-// 2 - Exercise: How to include children in render function
+1. How to map data to components
