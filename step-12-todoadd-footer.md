@@ -9,32 +9,32 @@ We want to add a footer to the `TodoItem`list in `TodoApp.jsx` file.
 First, we add `activeTodoCount` function:
 
 ```
-  activeTodoCount() {
-    return this.props.todos.reduce((accum, todo) => {
-      return todo.completed ? accum : accum + 1;
-    }, 0);
-  }
+activeTodoCount() {
+  return this.props.todos.reduce((accum, todo) => {
+    return todo.completed ? accum : accum + 1;
+  }, 0);
+}
 ```
 
 Then, we need to create a `renderFooter` function:
 ```
-  renderFooter() {
-    var activeTodoCount = this.activeTodoCount();
-    var completedCount = this.props.todos.length - activeTodoCount;
+renderFooter() {
+  var activeTodoCount = this.activeTodoCount();
+  var completedCount = this.props.todos.length - activeTodoCount;
 
-    if (!activeTodoCount && !completedCount) {
-      return undefined;
-    }
-
-    return (
-      <TodoFooter
-        count={activeTodoCount}
-        completedCount={completedCount}
-        nowShowing={this.props.nowShowing}
-        onClearCompleted={this.clearCompleted}
-      />
-    );
+  if (!activeTodoCount && !completedCount) {
+    return undefined;
   }
+
+  return (
+    <TodoFooter
+      count={activeTodoCount}
+      completedCount={completedCount}
+      nowShowing={this.props.nowShowing}
+      onClearCompleted={this.clearCompleted}
+    />
+  );
+}
 ```
 
 ###Add `TodoFooter.jsx` file
@@ -99,13 +99,13 @@ renderCount() {
 Next, call `renderCount` function:
 
 ```
-  render() {
-    return (
-      <footer className="footer">
-        {this.renderCount()}
-      </footer>
-    );
-  }
+render() {
+  return (
+    <footer className="footer">
+      {this.renderCount()}
+    </footer>
+  );
+}
 ```
 
 #####Add filter
@@ -120,46 +120,46 @@ import { Link } from 'react-router';
 Then, add `renderFilter` function:
 
 ```
-  renderFilter() {
+renderFilter() {
 
-    var nowShowing = this.props.nowShowing;
+  var nowShowing = this.props.nowShowing;
 
-    return (
-      <ul className="filters">
-        <li>
-          <Link to="/" className={classNames({selected: nowShowing === 'ALL' })}>
-            All
-          </Link>
-        </li>
-        {' '}
-        <li>
-          <Link to="/active" className={classNames({selected: nowShowing === 'ACTIVE' })}>
-            Active
-          </Link>
-        </li>
-        {' '}
-        <li>
-          <Link to="/completed" className={classNames({selected: nowShowing === 'COMPLETED'})}>
-            Completed
-          </Link>
-        </li>
-      </ul>
-    );
+  return (
+    <ul className="filters">
+      <li>
+        <Link to="/" className={classNames({selected: nowShowing === 'ALL' })}>
+          All
+        </Link>
+      </li>
+      {' '}
+      <li>
+        <Link to="/active" className={classNames({selected: nowShowing === 'ACTIVE' })}>
+          Active
+        </Link>
+      </li>
+      {' '}
+      <li>
+        <Link to="/completed" className={classNames({selected: nowShowing === 'COMPLETED'})}>
+          Completed
+        </Link>
+      </li>
+    </ul>
+  );
 
-  }
+}
 ```
 
 Next, call `renderFilter` function:
 
 ```
-  render() {
-    return (
-      <footer className="footer">
-        {this.renderCount()}
-        {this.renderFilter()}
-      </footer>
-    );
-  }
+render() {
+  return (
+   <footer className="footer">
+      {this.renderCount()}
+      {this.renderFilter()}
+    </footer>
+  );
+}
 ```
 
 
@@ -188,15 +188,15 @@ renderClearButton() {
 Then, call `renderClearButton` function:
 
 ```
-  render() {
-    return (
-      <footer className="footer">
-        {this.renderCount()}
-        {this.renderFilter()}
-        {this.renderClearButton()}
-      </footer>
-    );
-  }
+render() {
+  return (
+    <footer className="footer">
+      {this.renderCount()}
+      {this.renderFilter()}
+      {this.renderClearButton()}
+    </footer>
+  );
+}
 ```
 
 # Topics & exercices:
