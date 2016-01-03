@@ -4,22 +4,26 @@
 
 ## Step 11 - Add TodoApp Header
 
-Let add a header to our TodoItem list:
+Let add a `renderHeader` function to `TodoApp` component:
 
 ``` 
-header = (
-	<header className="header">
-	  <h1>todos</h1>
-	  <input
-	      ref="newField"
-	      className="new-todo"
-	      placeholder="What needs to be done?"
-	      value={this.state.newTodo}
-	      onKeyDown={this.handleNewTodoKeyDown}
-	      onChange={this.handleChange}
-	      autoFocus={true}
-	      />
-	</header>
+renderHeader() {
+  return (
+    <header className="header">
+      <h1>todos</h1>
+
+      <input
+        ref="newField"
+        className="new-todo"
+        placeholder="What needs to be done?"
+        value={this.state.newTodo}
+        onKeyDown={this.handleNewTodoKeyDown}
+        onChange={this.handleChange}
+        autoFocus={true}
+      />
+    </header>
+  );
+}
 );
 ``` 
 
@@ -28,8 +32,12 @@ and update return of `render` function:
 ``` 
 return (
   <div className="index">
-    {header}
-    {main}
+    {this.renderHeader()}
+    <section className="main">
+      <ul className="todo-list">
+        {this.renderItems()}
+      </ul>
+    </section>
   </div>
 );
 ``` 
