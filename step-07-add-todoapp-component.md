@@ -110,30 +110,10 @@ render() {
 with this one: 
 
 ``` 
-renderHeader() {
-  return (
-    <header className="header">
-      <h1>todos</h1>
-
-      <input
-        ref="newField"
-        className="new-todo"
-        placeholder="What needs to be done?"
-        value={this.state.newTodo}
-        onKeyDown={this.handleNewTodoKeyDown}
-        onChange={this.handleChange}
-        autoFocus={true}
-      />
-    </header>
-  );
-}
-
 render() {
   return (
     <AltContainer store={TodoStore}>
-      <div className="index">
-        {this.renderHeader()}
-      </div>
+      <div className="index"></div>
     </AltContainer>
   );
 }
