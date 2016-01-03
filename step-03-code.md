@@ -32,8 +32,8 @@ To run application, following command needs to be executed:
 npm start
 ```
 
-# Topics & exercices:
+# Topics:
 
-1. Topic: What is React
-2. Topic: What is Flux & Alt
-3. Topic: A word on Babel 6 & ES6
+1. What is React
+2. What is Flux & Alt
+3. A word on Babel 6 & ES6
