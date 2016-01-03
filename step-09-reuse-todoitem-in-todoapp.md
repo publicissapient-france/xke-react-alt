@@ -19,10 +19,6 @@ renderItems() {
         todo={todo}
         onToggle={this.toggle.bind(this, todo)}
         onDestroy={this.destroy.bind(this, todo)}
-        onEdit={this.edit.bind(this, todo)}
-        editing={this.state.editing === todo.id}
-        onSave={this.save.bind(this, todo)}
-        onCancel={this.cancel}
       />
     );
   }, this);
