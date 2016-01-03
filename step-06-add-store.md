@@ -78,7 +78,7 @@ onToggleAll(checked) {
 onToggle(todoToToggle) {
   this.setState({
     todos: this.state.todos.map(todo =>
-      todo !== todoToToggle ? todo : extend({}, todo, { completed: checked })
+      todo !== todoToToggle ? todo : extend({}, todo, { completed: !todoToToggle.completed })
     )
   });
 }
