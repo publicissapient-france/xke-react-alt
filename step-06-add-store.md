@@ -31,7 +31,9 @@ You need to configure a state in constructor of your store. Here, we need to set
 
 ```
 this.state = {
-  todos: []
+  todos: [],
+  nowShowing: undefined,
+  editing: undefined
 };
 ```
 
@@ -66,53 +68,57 @@ onAddTodo(title) {
 }
 
 onToggleAll(checked) {
-  var updatedTodos = this.state.todos.map(todo => 
-   extend({}, todo, {completed: checked})
-);
-  this.setState({todos: updatedTodos});
-};
+  this.setState({
+    todos: this.state.todos.map(todo =>
+      extend({}, todo, { completed: checked })
+    )
+  });
+}
 
 onToggle(todoToToggle) {
-  var updatedTodos = this.state.todos.map(todo =>
-      todo !== todoToToggle ?
-        todo : extend({}, todo, {completed: !todo.completed})
-  );
-  this.setState({todos: updatedTodos});
+  this.setState({
+    todos: this.state.todos.map(todo =>
+      todo !== todoToToggle ? todo : extend({}, todo, { completed: checked })
+    )
+  });
 }
 
 onDestroy(todoToDestroy) {
-  var updatedTodos = this.state.todos.filter(todo => todo !== todoToDestroy);
-  this.setState({todos: updatedTodos});
+  this.setState({
+    todos: this.state.todos.filter( todo => todo !== todoToDestroy )
+  });
 }
 
 onSave(command) {
-  var updatedTodos = this.state.todos.map(todo =>
-      todo !== command.todoToSave ?
-        todo : extend({}, command.todoToSave, {title: command.text})
-  );
-  this.setState({todos: updatedTodos});
+  this.setState({
+    todos: this.state.todos.map(todo =>
+      todo !== command.todoToSave ? todo : extend({}, command.todoToSave, { title: command.text })
+    )
+  });
 }
 
 onClearCompleted() {
-  <...>
+  this.setState({
+    todos: this.state.todos.filter( todo => !todo.completed )
+  });
 }
 
 onEdit(id) {
-  <...>
+  this.setState({ editing: id });
 }
 
 onShow(nowShowing) {
-  <...>
+  this.setState({ nowShowing: nowShowing })
 }
 ```
 
 
 
-// Topics & exercices:
-//
-// 1 - Topic: What is a `Store`
-// 2 - Topic: Async with `Store`s:  Where to put async calls
-// 3 - Topic: Use `Source`s with `Alt`
-// 4 - Topic: Store functions: `listen()`, `unlisten()`, `emitChange()`
-// 5 - Exercise: Implement the 3 functions: `onClearCompleted()`, `onEdit()`, `onShow()`
+# Topics & exercices:
+
+1. Topic: What is a `Store`
+2. - Topic: Async with `Store`s:  Where to put async calls
+3. - Topic: Use `Source`s with `Alt`
+4. - Topic: Store functions: `listen()`, `unlisten()`, `emitChange()`
+5. - Exercise: Implement the 3 functions: `onClearCompleted()`, `onEdit()`, `onShow()`
 
