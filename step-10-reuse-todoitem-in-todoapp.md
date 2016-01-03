@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 9 - Reuse TodoItem in TodoApp
+## Step 10 - Reuse TodoItem in TodoApp
 
 In a new function `renderItems` of `TodoApp.jsx`, you can now add code to map each entry of todo list into `TodoItem`s :
 
