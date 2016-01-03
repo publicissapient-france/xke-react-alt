@@ -27,23 +27,22 @@ You need to rename `styles/App.scss` to `styles/TodoApp.scss` if not done.
 
 #####Connect with TodoStore
 
+First import `TodoStore` & AltContainer:
+
 ``` 
 import TodoStore from '../stores/TodoStore'
+import AltContainer from 'alt/AltContainer';
+```
+Then, use altContainer in `render` function:
 
-...
-class TodoAppContainer extends React.Component {
-
-  render() {
-    return (
-        <AltContainer store={TodoStore}>
-          <TodoApp {...this.props} />
-        </AltContainer>
-    );
-  }
-  
+```
+render() {
+  return (
+      <AltContainer store={TodoStore}>
+        <div />
+      </AltContainer>
+  );
 }
-
-export default TodoAppContainer;
 ``` 
 
 #####Component handlers
@@ -138,6 +137,37 @@ render() {
   );
 }
 ```  
+
+##### Initialize component in constructor
+
+```
+constructor(props, context) {
+  super(props, context);
+
+  this.state = { newTodo: '' };
+}
+```
+
+##### Add & Bind event handlers
+
+Add event handlers:
+
+```
+handleChange(event) {
+
+}
+
+handleNewTodoKeyDown(event) {
+
+}
+```
+
+Then add event handler binding into constructor:
+
+```
+this.handleNewTodoKeyDown = this.handleNewTodoKeyDown.bind(this);
+this.handleChange = this.handleChange.bind(this);
+```
 
 # Topics & exercices:
 
