@@ -6,8 +6,8 @@
 
 ### Requirements
 
- - Node.js 4.x or more recent
- - Webstorm 10 or 11
+ - Node.js 5.x or more recent
+ - Webstorm 11
 
 #### Node.js
 
