@@ -106,32 +106,31 @@ render() {
 with this one: 
 
 ``` 
+renderHeader() {
+  return (
+    <header className="header">
+      <h1>todos</h1>
+
+      <input
+        ref="newField"
+        className="new-todo"
+        placeholder="What needs to be done?"
+        value={this.state.newTodo}
+        onKeyDown={this.handleNewTodoKeyDown}
+        onChange={this.handleChange}
+        autoFocus={true}
+      />
+    </header>
+  );
+}
+
 render() {
   return (
-    <div className="todoapp-component">
-      <section className="todoapp">
-        <header className="header">
-          <h1>todos</h1>
-          <input
-            ref="newField"
-            className="new-todo"
-            placeholder="What needs to be done?"
-            value={this.state.newTodo}
-            onKeyDown={this.handleNewTodoKeyDown}
-            onChange={this.handleChange}
-            autoFocus={true}
-            />
-        </header>
-      </section>
-      <footer className="info">
-        <p>Double-click to edit a todo</p>
-
-        <p>Created by <a href="http://github.com/wishpishh">Hannes Johansson</a> based on React example by <a
-          href="http://github.com/petehunt/">petehunt</a></p>
-
-        <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
-      </footer>
-    </div>
+    <AltContainer store={TodoStore}>
+      <div className="index">
+        {this.renderHeader()}
+      </div>
+    </AltContainer>
   );
 }
 ```  
