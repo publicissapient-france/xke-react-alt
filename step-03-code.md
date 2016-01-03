@@ -8,7 +8,7 @@
 
 Before going further, we need to do some renaming:
 
-- Rename `Main.jsx` to `TodoApp.jsx`
+- Rename `Main.js` to `TodoApp.jsx`
 - Rename `AppComponent` to `TodoApp`
 
 
