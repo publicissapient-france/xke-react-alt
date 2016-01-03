@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 13 - Add TodoApp footer
+## Step 12 - Add TodoApp footer
 
 We want to add a footer to the `TodoItem`list.
 
