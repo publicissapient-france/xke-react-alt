@@ -44,13 +44,13 @@ ReactDOM.render(routes, document.getElementById('app'));
 
 ####Update index file
 
-Replace :
+Replace following tags in `index.html`:
 
 ```
 <div id="app">APPLICATION CONTENT</div>
 ```
 
-By:
+By following code:
 
 ```
 <section id="app" class="todoapp"></section>
