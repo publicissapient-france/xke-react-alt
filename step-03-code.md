@@ -9,6 +9,7 @@
 Before going further, we need to do some renaming:
 
 - Rename `Main.js` to `TodoApp.jsx`
+- Rename `App.css` to `TodoApp.scss`
 - Rename `AppComponent` to `TodoApp`
 
 
