@@ -63,7 +63,6 @@ listenDbChanges() {
       return todo;
     });
 
-
     this.setState({todos: todoArray});
   });
 }
