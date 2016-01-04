@@ -22,8 +22,7 @@ constructor() {
 Add some actions in constructor of TodoActions:
 
 ```
-  this.generateActions(
-    // actions
-  );
-}
+this.generateActions(
+  // actions
+);
 ```
