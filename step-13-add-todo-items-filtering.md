@@ -48,8 +48,8 @@ componentWillUnmount() {
 ``` 
 
 
-// Topics & exercices:
-//
-// 1 - Topic: Explain goal of listening history base on `history` module function
-// 2 - Exercise: Implement filter todos based on variable `nowShowing` and possible values ('ACTIVE', 'COMPLETED' & default case)
-// 3 - Exercise: Implement `listen` & `unlisten` functions of `history` module to listen history a decide what to show with TodoAction `show`. You can use `state.location.pathname`to build filter to pass to `show` function. Filter variable passed to `show` function should match: 'ALL', 'ACTIVE' or 'COMPLETED'. 
+Topics:
+
+1. Topic: Explain goal of listening history base on `history` module function
+2. Exercise: Implement filter todos based on variable `nowShowing` and possible values ('ACTIVE', 'COMPLETED' & default case)
+3. Exercise: Implement `listen` & `unlisten` functions of `history` module to listen history a decide what to show with TodoAction `show`. You can use `state.location.pathname`to build filter to pass to `show` function. Filter variable passed to `show` function should match: 'ALL', 'ACTIVE' or 'COMPLETED'. 
