@@ -17,7 +17,6 @@ render() {
           className="toggle"
           type="checkbox"
           checked={this.props.todo.completed}
-          onChange={this.props.onToggle}
         />
         ...
       </div>
