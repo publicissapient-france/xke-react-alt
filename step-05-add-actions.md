@@ -27,7 +27,8 @@ Add some actions in constructor of TodoActions:
     'toggleAll',
     'toggle',
     'destroy',
-    'clearCompleted'
+    'clearCompleted',
+    'show'
   );
 }
 ```
