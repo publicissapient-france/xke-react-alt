@@ -5,7 +5,19 @@
 ## Step 17 - Add todo items filtering
 
 
-### 1/ Add `show` action`in `TodoActions`
+### 1/ Enrich mode of TodoStore
+
+We add a attribute  `nowShowing` in state of `TodoStore` which allow to associate current route of app to `nowShowing` variable:
+
+```
+this.state = {
+  todos: [],
+  nowShowing: undefined
+};
+```
+
+
+### 2/ Add `show` action`in `TodoActions`
 
 Add `show` action in constructor:
 
@@ -18,7 +30,7 @@ Add `show` action in constructor:
 ```
 
 
-### 2/ Add `show` handler in `TodoStore`
+### 3/ Add `show` handler in `TodoStore`
 
 ```
 onShow(nowShowing) {
@@ -27,7 +39,7 @@ onShow(nowShowing) {
 ```
 
 
-### 3/ Wire 
+### 4/ Wire properties and rendering
 
 We need to wire a `nowShowing` property into `renderFooter` function of `TodoApp` component:
 ```
@@ -44,7 +56,7 @@ renderFooter() {
 ```
 
 
-### 4/ Filter todos to show in `TodoStore`
+### 5/ Filter todos to show in `TodoStore`
 
 We need to add a `TodoStore` static function that returns expected todos to show: 
 
@@ -74,7 +86,7 @@ And then, use this new function in `TodoApp.jsx` component:
 ```
 
 
-### 5/ Add filter to `TodoFooter`
+### 6/ Add filter to `TodoFooter`
 
 First, Add `classNames` import:
 
