@@ -33,7 +33,6 @@ You need to configure a state in constructor of your store. Here, we need to set
 
 ```
 this.state = {
-  todos: [],
-  nowShowing: undefined
+  todos: []
 };
 ```
