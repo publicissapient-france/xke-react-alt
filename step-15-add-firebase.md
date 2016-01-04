@@ -43,6 +43,32 @@ constructor() {
 }
 ``` 
 
+Then, we implement the `listenDbChanges` function:
+
+```
+listenDbChanges() {
+  this.todosRef = this.firebase.child('todos');
+
+  this.todoRef = (todo) => this.todosRef.child(todo.key);
+
+  this.todosRef.on('value', snapshot => {
+    const todos = snapshot.val();
+
+    console.log(`[Firebase][onValue] ${JSON.stringify(todos, undefined, 2)}`);
+
+    const todoArray = Object.keys(todos || {}).map(key => {
+      const todo = todos[key];
+      todo.key = key;
+
+      return todo;
+    });
+
+
+    this.setState({todos: todoArray});
+  });
+}
+```
+
 ###Write changes
 
 To propagate changes to database, we need to apply different strategies depending on use cases:
