@@ -14,12 +14,7 @@ renderItems() {
   
   return this.props.todos.map(function (todo) {
     return (
-      <TodoItem
-        key={todo.id}
-        todo={todo}
-        onToggle={this.toggle.bind(this, todo)}
-        onDestroy={this.destroy.bind(this, todo)}
-      />
+      <TodoItem key={todo.id} todo={todo} />
     );
   }, this);
 }
@@ -28,9 +23,9 @@ renderItems() {
 Then, add call into `render` function:
 
 ```
-{this.renderItems()}
+<section className="main">
+  <ul className="todo-list">
+    {this.renderItems()}
+  </ul>
+</section>
 ```
-
-Topics:
-
-1. How to map data to components

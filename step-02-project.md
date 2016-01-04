@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 2 - Project
+## Step 02 - Project
 
 ### Create Project
 

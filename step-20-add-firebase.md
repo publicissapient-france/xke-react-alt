@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 15 - Add of Firebase support
+## Step 20 - Add of Firebase support
 
 ### Dependencies
 
@@ -68,7 +68,7 @@ listenDbChanges() {
 }
 ```
 
-###Write changes
+### Write changes
 
 To propagate changes to database, we need to apply different strategies depending on use cases:
 
@@ -78,12 +78,6 @@ onAddTodo(title) {
     id: uuid.v4(),
     title: title,
     completed: false
-  });
-}
-
-onToggleAll(checked) {
-  this.state.todos.forEach(todo => {
-    this.todosRef.child(todo.key).update({completed: checked});
   });
 }
 
@@ -108,11 +102,11 @@ onShow(nowShowing) {
 }
 ``` 
 
-###Add Security
+### Add Security
 
 A this step, database is open to public read & write. To fix this security issue, we need to restrict access to database.
 
-####Add Application to Google
+#### Add Application to Google
 
 First, we need to create a Google Application based on instructions on following page:
 ```
@@ -135,7 +129,7 @@ Once application is created and _client id_ & _client secret_ configured in Fire
 
 At least it ensures database is allowed to be read or written only by google authenticated users.
 
-####Add authentication code
+#### Add authentication code
 
 Once everything is configured on services side, we need to integrate authentication code to application:
 

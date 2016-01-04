@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 3 - Code
+## Step 03 - Code
 
 ### Some renaming
 
@@ -32,8 +32,3 @@ To run application, following command needs to be executed:
 npm start
 ```
 
-# Topics:
-
-1. What is React
-2. What is Flux & Alt
-3. A word on Babel 6 & ES6

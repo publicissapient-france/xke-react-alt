@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 5 - Add Actions 
+## Step 05 - Add Actions 
 
 ####Scafold
 ``` 
@@ -23,19 +23,7 @@ Add some actions in constructor of TodoActions:
 
 ```
   this.generateActions(
-    'addTodo',
-    'toggleAll',
-    'toggle',
-    'destroy',
-    'clearCompleted',
-    'show'
+    // actions
   );
 }
 ```
-
-
-# Topics:
-
-1. What is an `Action` (`Action Creator`s & `Constant`s)
-2. Different ways to create an action (return value, use of dispatch, special cases: undefined & Promises)
-3. Defer an action to avoid a dispatch in dispatch

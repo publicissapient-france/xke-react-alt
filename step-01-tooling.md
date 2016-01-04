@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 1 - Tooling
+## Step 01 - Tooling
 
 ### Requirements
 

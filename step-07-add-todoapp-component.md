@@ -2,30 +2,11 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 7 - Add TodoApp Component
+## Step 07 - Add TodoApp Component
 
 First, we need to make it working.
 
-#####Styles
-We will use official TodoMVC styles, therefore, we will install needed packages.
-
-######Dependencies
-```
-npm i -S todomvc-common
-npm i -S todomvc-app-css
-```
-
-######Code
-``` 
-require('todomvc-common/base.css');
-require('todomvc-app-css/index.css');
-```
-
-######Renaming of App.scss
-
-You need to rename `styles/App.scss` to `styles/TodoApp.scss` if not done.
-
-#####Connect with TodoStore
+### 1/ Connect with TodoStore
 
 First import `alt-container`:
 
@@ -37,7 +18,7 @@ Then, import `TodoStore` & `AltContainer` modules in `TodoApp.jsx`:
 
 ``` 
 import TodoStore from '../stores/TodoStore'
-import AltContainer from 'alt/AltContainer';
+import AltContainer from 'alt-container';
 ```
 Then, declare a new `TodoAppContainer` component & export this component:
 
@@ -57,43 +38,14 @@ class TodoAppContainer extends React.Component {
 export default TodoAppContainer;
 ```
 
-#####Component handlers
-
-##### Import of TodoActions
+### 2/ Import of TodoActions
 
 ``` 
 import TodoActions from '../actions/TodoActions';
 ``` 
 
-#####Handlers
 
-```
-toggleAll(event) {
-  var checked = event.target.checked;
-  TodoActions.toggleAll(checked);
-}
-
-toggle(todo) {
-  TodoActions.toggle(todo);
-}
-
-destroy(todo) {
-  TodoActions.destroy(todo);
-}
-
-save(todoToSave, text) {
-  TodoActions.save({
-    todoToSave: todoToSave,
-    text: text
-  });
-}
-
-clearCompleted() {
-  TodoActions.clearCompleted();
-}
-```
-
-#####Render
+### 3/ Implement `render`function
 
 You can replace scafolded code: 
 ```
@@ -112,50 +64,7 @@ with this one:
 ``` 
 render() {
   return (
-    <AltContainer store={TodoStore}>
-      <div className="index"></div>
-    </AltContainer>
+    <div className="index"></div>
   );
 }
 ```  
-
-##### Initialize component in constructor
-
-```
-constructor(props, context) {
-  super(props, context);
-
-  this.state = { newTodo: '' };
-}
-```
-
-##### Add & Bind event handlers
-
-First, add event handlers:
-
-```
-handleChange(event) {
-
-}
-
-handleNewTodoKeyDown(event) {
-
-}
-```
-
-Then, add event handler binding into constructor:
-
-```
-this.handleNewTodoKeyDown = this.handleNewTodoKeyDown.bind(this);
-this.handleChange = this.handleChange.bind(this);
-```
-
-# Topics:
-
-1. Give some infos about ES5 vs ES6 React code
-2. Give a word about mixins
-3. Explain JSX, structure and lifecycle of components
-4. TodoMVC has reusable resource set
-5. Role of AltContainer : Connect Stores & Actions to Component lifecycle
-6. Explain render function, especially, variable association
-
