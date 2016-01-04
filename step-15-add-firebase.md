@@ -2,7 +2,7 @@
 # TodoMVC - React, Alt, ES6 revisited
 
 
-## Step 16 - Add of Firebase support
+## Step 15 - Add of Firebase support
 
 ### Dependencies
 
