@@ -70,22 +70,12 @@ onDestroy(todo) {
   this.todoRef(todo).remove();
 }
 
-onSave(command) {
-  this.todoRef(command.todoToSave).update({
-    title: command.text
-  });
-}
-
 onClearCompleted() {
   this.state.todos.forEach(todo => {
     if (todo.completed) {
       this.todoRef(todo).remove();
     }
   });
-}
-
-onEdit(id) {
-  this.setState({editing: id});
 }
 
 onShow(nowShowing) {
