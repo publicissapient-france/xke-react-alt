@@ -48,7 +48,7 @@ componentWillUnmount() {
 ``` 
 
 
-Topics:
+# Topics:
 
 1. Topic: Explain goal of listening history base on `history` module function
 2. Exercise: Implement filter todos based on variable `nowShowing` and possible values ('ACTIVE', 'COMPLETED' & default case)
