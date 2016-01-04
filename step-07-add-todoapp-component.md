@@ -38,14 +38,8 @@ class TodoAppContainer extends React.Component {
 export default TodoAppContainer;
 ```
 
-### 2/ Import of TodoActions
 
-``` 
-import TodoActions from '../actions/TodoActions';
-``` 
-
-
-### 3/ Implement `render`function
+### 2/ Implement `render`function
 
 You can replace scafolded code: 
 ```
