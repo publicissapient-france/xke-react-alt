@@ -20,7 +20,7 @@ import Firebase from 'firebase';
 
 ### Create Firebase database
 
-As we may not have laready an account on firebase.io, first step would be to create an account. Then, you can create a new database or use default created database.
+As we may not have already an account on firebase.io, first step would be to create an account. Then, you can create a new database or use default created database.
 
 ### Listen changes
 
