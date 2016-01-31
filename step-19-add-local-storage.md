@@ -29,7 +29,6 @@ Also, we can init `TodoStore` by reading the local storage as following code in 
 ```
 this.state = {
   todos: this.load('todos', []),
-  nowShowing: this.load('nowShowing', []),
-  editing: this.load('editing', []),
+  nowShowing: this.load('nowShowing', '')
 };
 ``` 
